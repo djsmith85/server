@@ -27,6 +27,7 @@ jobs:
     outputs:
       release_version: ${{ steps.version.outputs.version }}
       branch-name: ${{ steps.branch.outputs.branch-name }}
+      last_release_tag: ${{ steps.get_release_info.outputs.last_release_tag }}
     steps:
       - name: Branch check
         if: ${{ inputs.release_type != 'Dry Run' }}
