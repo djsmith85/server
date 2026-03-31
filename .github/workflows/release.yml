@@ -65,16 +65,16 @@ jobs:
     permissions:
       contents: write
     steps:
-      - name: Download latest release Docker stubs
-        if: ${{ inputs.release_type != 'Dry Run' }}
-        uses: bitwarden/gh-actions/download-artifacts@main
-        with:
-          workflow: build.yml
-          workflow_conclusion: success
-          branch: ${{ needs.setup.outputs.branch-name }}
-          artifacts: "docker-stub-US.zip,
-            docker-stub-EU.zip,
-            swagger.json"
+      # - name: Download latest release Docker stubs
+      #   if: ${{ inputs.release_type != 'Dry Run' }}
+      #   uses: bitwarden/gh-actions/download-artifacts@main
+      #   with:
+      #     workflow: build.yml
+      #     workflow_conclusion: success
+      #     branch: ${{ needs.setup.outputs.branch-name }}
+      #     artifacts: "docker-stub-US.zip,
+      #       docker-stub-EU.zip,
+      #       swagger.json"
 
       # - name: Dry Run - Download latest release Docker stubs
       #   if: ${{ inputs.release_type == 'Dry Run' }}
