@@ -99,4 +99,5 @@ jobs:
           name: "Version ${{ needs.setup.outputs.release_version }}"
           body: "<insert release notes here>"
           token: ${{ secrets.GITHUB_TOKEN }}
+          generateReleaseNotes: true
           draft: true
